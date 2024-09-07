@@ -5,7 +5,6 @@ using API.Data;
 using API.Dtos;
 using API.Entities;
 using API.Interfaces;
-using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

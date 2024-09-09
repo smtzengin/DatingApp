@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "b5d5VICrjlqXhs/7EQuw7d+A+eBTBTJc37YmWLIPd9/Td8eOweqDRhkcXrxvGDCO7khL0/PMi6iMyVruXZNq6A==",
+  "dgSpecHash": "6glfEDzKyDPV92NJ1cAxkFLN9Mdt8Afe8Cg9kkjgih98NzrWmahwAj06Zi+cZjfA4c9vXRLnau8NzNCo6DdmBw==",
   "success": true,
   "projectFilePath": "/Users/sametzengin/Documents/GitHub/DatingApp/DatingApp/API/API.csproj",
   "expectedPackageFiles": [
+    "/Users/sametzengin/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/sametzengin/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/sametzengin/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.8/microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
     "/Users/sametzengin/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

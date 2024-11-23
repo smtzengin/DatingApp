@@ -6,6 +6,8 @@ import { delay, finalize } from 'rxjs';
 export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
   const busyService = inject(BusyService);
 
+  busyService.busy()
+
   return next(req).pipe(
     delay(1000),
     finalize(() => 

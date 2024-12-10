@@ -8,18 +8,18 @@
             <div class="d-flex mx-2">
                 <label class="col-form-label">Age from: </label>
                 <input type="number" class="form-control ms-1" style="width: 70px;" name="minAge"
-                [(ngModel)]="userParams.minAge">
+                [(ngModel)]="memberService.userParams().minAge">
             </div>
 
             <div class="d-flex mx-2">
                 <label class="col-form-label">Age to: </label>
                 <input type="number" class="form-control ms-1" style="width: 70px;" name="maxAge"
-                [(ngModel)]="userParams.maxAge">
+                [(ngModel)]="memberService.userParams().maxAge">
             </div>
 
             <div class="d-flex mx-2">
                 <label class="col-form-label">Show: </label>
-                <select name="gender" style="width: 130px;" class="form-select ms-1" [(ngModel)]="userParams.gender">
+                <select name="gender" style="width: 130px;" class="form-select ms-1" [(ngModel)]="memberService.userParams().gender">
                     @for (gender of genderList; track gender.value) {
                         <option [value]="gender.value">
                             {{gender.display}}
@@ -30,6 +30,28 @@
 
             <button class="btn btn-primary ms-1" type="submit">Apply Filters</button>
             <button (click)="resetFilters()" class="btn btn-info ms-1" type="button">Reset Filters</button>
+
+            <div class="col">
+                <div class="btn-group float-end">
+                    <button
+                    type="button"
+                    class="btn btn-primary"
+                    name="OrderBy"
+                    (click)="loadMembers()"
+                    btnRadio="lastActive"
+                    [(ngModel)]="memberService.userParams().orderBy"
+                    >Last Active</button>
+
+                    <button
+                    type="button"
+                    class="btn btn-primary"
+                    name="OrderBy"
+                    (click)="loadMembers()"
+                    btnRadio="created"
+                    [(ngModel)]="memberService.userParams().orderBy"
+                    >Newest Members</button>
+                </div>
+            </div>
         </form>
     </div>
 
@@ -50,6 +72,7 @@
         [totalItems]="memberService.paginatedResult()?.pagination!.totalItems"   
         [itemsPerPage]="memberService.paginatedResult()?.pagination!.itemsPerPage"
         (pageChanged)="pageChanged($event)"
+        [(ngModel)]="memberService.paginatedResult()?.pagination!.currentPage"
         [maxSize]="10"
         previousText="&lsaquo;" 
         nextText="&rsaquo;" 

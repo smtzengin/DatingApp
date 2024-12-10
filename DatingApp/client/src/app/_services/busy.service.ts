@@ -11,7 +11,6 @@ export class BusyService {
 
   busy() {
     this.busyRequestCount++;
-    console.log('Spinner gösteriliyor...');
     this.spinnerService.show(undefined, {
       type: 'line-scale-party',
       bdColor: 'rgba(255,255,255,0)',
@@ -21,7 +20,6 @@ export class BusyService {
 
   idle() {
     this.busyRequestCount--;
-    console.log('Spinner gizleniyor...');
     if (this.busyRequestCount <= 0) {
       this.busyRequestCount = 0;
       this.spinnerService.hide();
